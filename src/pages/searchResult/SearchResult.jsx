@@ -18,8 +18,6 @@ const SearchResult = () => {
     const [loading, setLoading] = useState(false);
     const { query } = useParams();
 
-    console.log(query);
-
     const fetchIntialData = () => {
         setLoading(true);
         fetchDataFromApi(`/search/multi?query=${query}&page=${pageNum}`).then((res) => {
